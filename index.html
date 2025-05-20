@@ -19,17 +19,40 @@
   </header>
 
   <main>
-    <section class="about">
-      <div class="container">
-        <h2>🌌 O nas</h2>
-        <p>
-          Grappa Destiny to przestrzeń dla graczy, gdzie dominuje <strong>League of Legends</strong>, ale również dużo śmiechu przy <strong>Gartic Phone</strong>. Budujemy społeczność opartą na zabawie, zaufaniu i luzie.
-        </p>
-        <p>
-          Za serwerem stoi <strong>DesTu</strong> – nieformalny przywódca ekipy z pozytywnym vibe'em ✨
-        </p>
-      </div>
-    </section>
+  <section class="about">
+    <div class="container">
+      <h2>🌌 O nas</h2>
+      <p>
+        Grappa Destiny to przestrzeń dla graczy, gdzie dominuje <strong>League of Legends</strong>, ale również dużo śmiechu przy <strong>Gartic Phone</strong>. Budujemy społeczność opartą na zabawie, zaufaniu i luzie.
+      </p>
+      <p>
+        Za serwerem stoi <strong>DesTu</strong> – nieformalny przywódca ekipy z pozytywnym vibe'em ✨
+      </p>
+    </div>
+  </section>
+
+  <section class="server-info">
+    <div class="container">
+      <h2>📡 Informacje o serwerze</h2>
+      <div id="discord-info">Ładowanie danych...</div>
+    </div>
+  </section>
+
+  <script>
+    fetch("https://discord.com/api/guilds/1056134342826528808/widget.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("discord-info");
+        container.innerHTML = `
+          <p><strong>Serwer:</strong> ${data.name}</p>
+          <p><strong>Osoby online:</strong> ${data.presence_count}</p>
+        `;
+      })
+      .catch(err => {
+        document.getElementById("discord-info").innerText = "Błąd ładowania danych z Discorda.";
+      });
+  </script>
+
 
     <section class="features">
       <div class="container">
