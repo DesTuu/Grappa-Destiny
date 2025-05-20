@@ -20,11 +20,17 @@ body {
   font-family: var(--font-main);
 }
 
+/* Style linków */
 a {
   color: var(--primary-color);
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Główne kontenery */
 .container {
   width: 90%;
   max-width: 1000px;
@@ -36,19 +42,19 @@ a {
 header {
   background-color: var(--foreground-dark);
   border-bottom: 3px solid var(--primary-color);
-  padding: 2rem 1rem; /* dla lepszego odstępu */
+  padding: 2rem 1rem;
 }
 
 .header-content {
   display: flex;
-  flex-direction: column; /* Ustawienie pionowe */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 1rem;
 }
 
 .logo {
-  width: 880px; /* większe logo */
+  width: 880px;
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 15px var(--primary-color);
@@ -71,7 +77,6 @@ header p {
   color: var(--accent-gray);
 }
 
-
 /* Sekcje */
 section {
   padding: 2rem 0;
@@ -85,7 +90,8 @@ section h2 {
   color: var(--primary-color);
 }
 
-section p, section li {
+section p,
+section li {
   font-size: 1rem;
   color: var(--text-light);
 }
@@ -160,4 +166,105 @@ footer {
     width: 100%;
     text-align: center;
   }
+}
+
+/* ---------------------------- */
+/* Dodatkowy styl dla destu.html */
+/* ---------------------------- */
+
+body.destu-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  color: #222;
+  font-family: var(--font-main);
+}
+
+body.destu-page .logo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+body.destu-page h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  font-size: 2.2rem;
+}
+
+body.destu-page p.description {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+body.destu-page a.github {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+body.destu-page a.github:hover {
+  text-decoration: underline;
+}
+
+body.destu-page {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: var(--font-main);
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(65, 105, 225, 0.2);
+}
+
+/* Styl logo */
+body.destu-page .logo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Tytuł */
+body.destu-page h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-title);
+  color: var(--primary-color);
+  font-size: 2.2rem;
+}
+
+/* Opis */
+body.destu-page p.description {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* GitHub link */
+body.destu-page a.github {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+}
+
+body.destu-page a.github:hover {
+  text-decoration: underline;
 }
